@@ -4,4 +4,4 @@ let farenDegree;
 //celsDegree = 15;
 farenDegree = (9 / 5) * celsDegree + 32;
 console.log(farenDegree);
-alert(`Значение температуры в градусах Цельсия = ${celsDegree} C` + `\nЗначение температуры в градусах Фаренгейта = ${farenDegree} F`);
+alert(`Значение температуры в градусах Цельсия = ${celsDegree} C` + `\nЗначение температуры в градусах Фаренгейт = ${farenDegree} F`);
