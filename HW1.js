@@ -4,8 +4,6 @@
 */
 let number = prompt('В диапазоне от 2 до N будут выведены все простые числа. Введите значение границы диапазона больше 1. N = ');
 
-
-
 function simpleNumber (number)
 {
     let simpNumbs = []
@@ -20,16 +18,12 @@ function simpleNumber (number)
             alert(`В выбранном вами диапазоне от 2 до ${number}, простыми являются числа ${simpNumbs}`);
             break;
             }
-        
         else {
-            
-            
+                
             let divides = parseInt(number**0.5);
-            //
             for (let i=3; i <= number;i++) {
                 let zeroCount = 0;
                 for(let j = 2; j <= divides; j++) {
-                    
                     if (i % j == 0 & i != j  ) {
                         zeroCount++;
                         /*alert(`Текущее число =  ${i} Максимальный делитель =  ${divides} Текущий делитель =  ${j} Текущий остаток =  ${i % j} Текущее значение счетчиков 0 остатков от деления =  ${zeroCount}`);
@@ -45,35 +39,16 @@ function simpleNumber (number)
                 if (zeroCount == 0) {
                     simpNumbs.push(i);
                     }
-        
-                    
-            
-                    
-                  
+                 
             }
-               
-            
+           
             alert(`В выбранном вами диапазоне от 2 до ${number}, простыми являются числа ${simpNumbs}`);
-
             break;
-            
-         
+        
         }
-
-        
-
-        
-
 
     }
     
 }       
-        
-        
-        
-        
-        
-    
-
 
 simpleNumber (number) 
