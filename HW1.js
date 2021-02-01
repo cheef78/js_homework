@@ -3,7 +3,7 @@
 С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
 */
 
-/* let number = prompt('В диапазоне от 2 до N будут выведены все простые числа. Введите значение границы диапазона больше 1. N = ');
+let number = prompt('В диапазоне от 2 до N будут выведены все простые числа. Введите значение границы диапазона больше 1. N = ');
 
 function simpleNumber (number)
 {
@@ -45,7 +45,7 @@ function simpleNumber (number)
     
 }       
 
-simpleNumber (number);  */
+simpleNumber (number);  
 
 /*
 С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть
@@ -74,10 +74,10 @@ function countBasketPrice (basket){
     for (let i = 0; i < basket.length; i++){
         totalMass = totalMass + basket[i][2];
         totalPrice = totalPrice + basket[i][1]*basket[i][2];
-        goodsName.push(basket[i][0])    
+        goodsName.push(basket[i][0] + ' (' + basket[i][2] + ' кг по ' + basket[i][1] + ' руб/кг); ')    
     }
 
-    alert (`В вашй корзине находятся товары следующих наименований - ${goodsName}. Общая масса товаров в корзине = ${totalMass} кг. Общая стоимость товаров в корзине = ${totalPrice} руб.`)  
+    alert (`В вашй корзине находятся товары следующих наименований - ${goodsName}. \nОбщая масса товаров в корзине = ${totalMass} кг. \nОбщая стоимость товаров в корзине = ${totalPrice} руб.`)  
     
 }
 
