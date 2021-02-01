@@ -2,7 +2,8 @@
 /*
 С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
 */
-let number = prompt('В диапазоне от 2 до N будут выведены все простые числа. Введите значение границы диапазона больше 1. N = ');
+
+/* let number = prompt('В диапазоне от 2 до N будут выведены все простые числа. Введите значение границы диапазона больше 1. N = ');
 
 function simpleNumber (number)
 {
@@ -26,14 +27,7 @@ function simpleNumber (number)
                 for(let j = 2; j <= divides; j++) {
                     if (i % j == 0 & i != j  ) {
                         zeroCount++;
-                        /*alert(`Текущее число =  ${i} Максимальный делитель =  ${divides} Текущий делитель =  ${j} Текущий остаток =  ${i % j} Текущее значение счетчиков 0 остатков от деления =  ${zeroCount}`);
-                        */
                     }
-                    else {
-                        /*alert(`Текущее число =  ${i} Максимальный делитель =  ${divides} Текущий делитель =  ${j} Текущий остаток =  ${i % j} Текущее значение счетчиков 0 остатков от деления =  ${zeroCount}`);
-                        */
-                    }
-                    
                 }
                 
                 if (zeroCount == 0) {
@@ -51,4 +45,40 @@ function simpleNumber (number)
     
 }       
 
-simpleNumber (number) 
+simpleNumber (number);  */
+
+/*
+С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть
+сущность корзины. Нужно реализовать функционал подсчета стоимости корзины в
+зависимости от находящихся в ней товаров.
+3. Товары в корзине хранятся в массиве. Задачи:
+a. Организовать такой массив для хранения товаров в корзине;
+b. Организовать функцию countBasketPrice , которая будет считать стоимость корзины.
+*/
+
+let basket = [];
+basket = [
+          ['apples',115,1.5],
+          ['lemons',95,0.5],
+          ['potatoo',35 ,5],
+          ['onion', 25,2],
+          ['carrot',45,3],
+          ['pork',550,2],
+          ['milk',76 ,2]
+            ];
+
+function countBasketPrice (basket){
+    let totalMass = 0;
+    let totalPrice = 0;
+    let goodsName = []
+    for (let i = 0; i < basket.length; i++){
+        totalMass = totalMass + basket[i][2];
+        totalPrice = totalPrice + basket[i][1]*basket[i][2];
+        goodsName.push(basket[i][0])    
+    }
+
+    alert (`В вашй корзине находятся товары следующих наименований - ${goodsName}. Общая масса товаров в корзине = ${totalMass} кг. Общая стоимость товаров в корзине = ${totalPrice} руб.`)  
+    
+}
+
+countBasketPrice (basket);
