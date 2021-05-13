@@ -11,9 +11,9 @@ const goods = [
     return `<div class="goods-item"><img src = "good.jpg" alt = "good_pic" ><h3>${title}</h3><p>${price}</p></div> <br>`;
   };
   
-  const renderGoodsList = (list) => {
+  const renderGoodsList = (list = [{ title: 'No_good', price:'No_price' }]) => {
     let goodsList = list.map(item => renderGoodsItem(item.title, item.price));
     document.querySelector('.goods-list').innerHTML = goodsList.join('');
   }
   
-  renderGoodsList(goods);
+  renderGoodsList();
