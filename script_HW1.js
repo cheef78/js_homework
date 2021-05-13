@@ -16,4 +16,4 @@ const goods = [
     document.querySelector('.goods-list').innerHTML = goodsList.join('');
   }
   
-  renderGoodsList();
+  renderGoodsList(goods);
