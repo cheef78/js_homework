@@ -105,23 +105,33 @@ body {
     display: flex;
 }
 
-.project__parent {
+.goods-list {
     display: flex;
     margin-top: 32px;
     justify-content: space-between;
 }
 
-.project__img{
+.goods-item__img{
+    width:300px;
+    height:200px; 
     width: 100%;
 }
-.project__item {
+.goods-item {
     position: relative;
     flex-grow: 1;
 }
-.project__item_margin {
+
+.goods-item img:first-child {
+    width:150px;
+    height:150px; 
+       
+}
+
+
+.goods-item_margin {
     margin-right: 32px;
 }
-.project__text {
+.goods-item__text {
     font-size: 32px;
     line-height: 46px;
     text-align: right;
