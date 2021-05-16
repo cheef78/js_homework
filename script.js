@@ -45,16 +45,23 @@ class GoodsList {
         let listHtml = '';
         this.goods.forEach(good => {
         const goodItem = new GoodsItem(good.title, good.price, good.image);
-        console.log(good.title, good.price, good.image)
         listHtml += goodItem.render();
-        console.log(goodItem.render())
         });
-        
         document.querySelector('.goods-list').innerHTML = listHtml;
         }  
+
+        doodssum() {
+          let summa = 0;
+          this.goods.forEach(good => {
+          const goodItem = new GoodsItem(good.title, good.price, good.image);
+          summa += good.price;
+          });
+          summa = `<div class="text"> <br> <h3> Общая сумма товаров в списке =  ${summa} рублей </h3></div><br>`;
+          document.querySelector('.text').innerHTML = summa;
+          }     
     
     }
 const list = new GoodsList();
 list.fetchGoods();
 list.render();
-console.log(list.render())
+list.doodssum();
