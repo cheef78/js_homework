@@ -109,6 +109,7 @@ body {
     display: flex;
     margin-top: 32px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .goods-item__img{
@@ -119,11 +120,17 @@ body {
 .goods-item {
     position: relative;
     flex-grow: 1;
+    text-align:center;
+    font-size: 22px;
+    line-height: 26px;
+   letter-spacing: 0.05em;
+    color:darkgoldenrod;
 }
 
 .goods-item img:first-child {
     width:150px;
-    height:150px; 
+    height:150px;
+   
        
 }
 
