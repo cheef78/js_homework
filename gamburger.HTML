@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Список</title>
+  
+ </head>
+ <body>
+  <form style = "margin-left:50px;">
+    <p><b>Выберите тип бургера и их количество</b></p>
+    <div id = "big">
+    <p><input name="burgtype" type="radio" value="big" checked> Большой</p>
+    </div>
+    <div id = "little">
+    <p><input name="burgtype" type="radio" value="little"> Маленький</p>
+    </div>
+    
+    <p><b>Выберите тип и количество желаемых топпингов и добавок</b></p>
+
+   <div id = "chezzcount">
+   <p>Добавить сыр?:</p>
+   <p><input type="number" name="chezz" value="0" min="0" max="10" step="1"></p> 
+   </div>
+
+   <div id = "saladcount">
+   <p>Добавить салат?:</p>
+   <p><input type="number" name="salad" value="0" min="0" max="10" step="1"></p> 
+   </div>
+
+   <div id = "potatoocount">
+   <p>Добавить картофель?:</p>
+   <p><input type="number" name="potatoo" value="0" min="0" max="10" step="1"></p> 
+   </div>
+
+   
+   <p>Добавить приправ?:</p>
+    <div id = "spicecounton">
+    <p><input name="spicecount" type="radio" value="spicecounton" checked> Да</p>
+    </div>
+    
+    <div id = "spicecountoff">
+    <p><input name="spicecount" type="radio" value="spicecountoff" > Нет</p>
+    </div>
+
+    
+   <p>Добавить соус?:</p>
+    <div id = "soucecounton">
+    <p><input name="soucecount" type="radio" value="spicecounton" checked> Да</p>
+    </div>
+    
+    <div id = "soucecountoff">
+    <p><input name="soucecount" type="radio" value="soucecountofа" > Нет</p>
+    </div>
+
+   
+    
+
+
+   
+   <p><input type="reset" value="Сбросить выбор"></p> 
+  <p>  <a href ='gamburger.js'> "Выполнить расчет стоимости и калорийности" </a> </p> 
+  </form>
+
+  <div id="btn">
+    <a href ='js/glass.js' onclick = 'change(); return false;'>кнопка</a><!--  onclick -возникает при щелчке левой кнопкой мыши на элементе change();-событие изменения формы return false;' 'это -->
+</div>
+ </body>
+</html>

@@ -18,6 +18,22 @@
   
 //   renderGoodsList(goods);
 
+class BasketItem {
+  constructor(id, title, price, count) {
+    this.id = id;
+    this.title = title;
+    this.price = price;
+    this.count = count;
+    }
+  render() {
+    return `<div class="goods-item"><img src =${this.image} alt = "good_pic" ><h3>${this.title}</h3><p>${this.price} </p></div> <br>`;
+    }
+    }
+
+
+
+
+
 class GoodsItem {
   constructor(title, price, image) {
     this.title = title;
