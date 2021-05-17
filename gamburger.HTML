@@ -6,63 +6,63 @@
   
  </head>
  <body>
+ 
   <form style = "margin-left:50px;">
-    <p><b>Выберите тип бургера и их количество</b></p>
-    <div id = "big">
-    <p><input name="burgtype" type="radio" value="big" checked> Большой</p>
-    </div>
+  
+   <p><b>Выберите тип бургера</b></p>
+   
+    <p id = "big"><input name="burgtype" type="radio" value="big" checked> Большой</p>
+    
     <div id = "little">
     <p><input name="burgtype" type="radio" value="little"> Маленький</p>
     </div>
     
     <p><b>Выберите тип и количество желаемых топпингов и добавок</b></p>
 
-   <div id = "chezzcount">
+   <div id = "chezz">
    <p>Добавить сыр?:</p>
-   <p><input type="number" name="chezz" value="0" min="0" max="10" step="1"></p> 
+   <p><input type="number" name="chezz" value="1" min="0" max="10" step="1"></p> 
    </div>
 
-   <div id = "saladcount">
+   <div id = "salad">
    <p>Добавить салат?:</p>
-   <p><input type="number" name="salad" value="0" min="0" max="10" step="1"></p> 
+   <p><input type="number" name="salad" value="1" min="0" max="10" step="1"></p> 
    </div>
 
-   <div id = "potatoocount">
+   <div id = "potatoo">
    <p>Добавить картофель?:</p>
-   <p><input type="number" name="potatoo" value="0" min="0" max="10" step="1"></p> 
+   <p><input type="number" name="potatoo" value="1" min="0" max="10" step="1"></p> 
    </div>
 
    
-   <p>Добавить приправ?:</p>
-    <div id = "spicecounton">
+   <p>Добавить приправы?:</p>
+    <div id = "spice">
     <p><input name="spicecount" type="radio" value="spicecounton" checked> Да</p>
     </div>
     
-    <div id = "spicecountoff">
+    <div id = "spiceoff">
     <p><input name="spicecount" type="radio" value="spicecountoff" > Нет</p>
     </div>
 
     
    <p>Добавить соус?:</p>
-    <div id = "soucecounton">
+    <div id = "souce">
     <p><input name="soucecount" type="radio" value="spicecounton" checked> Да</p>
     </div>
     
     <div id = "soucecountoff">
-    <p><input name="soucecount" type="radio" value="soucecountofа" > Нет</p>
+    <p><input name="soucecount" type="radio" value="soucecountoff" > Нет</p>
     </div>
 
-   
+   </form>
     
 
 
+   <button style = "margin-left:50px;" onclick="processingAction()"> Выполнить(обновить) расчет стоимости(калорийности) гамбургера </button>
    
-   <p><input type="reset" value="Сбросить выбор"></p> 
-  <p>  <a href ='gamburger.js'> "Выполнить расчет стоимости и калорийности" </a> </p> 
-  </form>
 
-  <div id="btn">
-    <a href ='js/glass.js' onclick = 'change(); return false;'>кнопка</a><!--  onclick -возникает при щелчке левой кнопкой мыши на элементе change();-событие изменения формы return false;' 'это -->
-</div>
+<div class="text" style = "margin-left:50px;"></div>
+
  </body>
+ <script src="gamburger.js"></script>
 </html>
