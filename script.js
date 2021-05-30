@@ -82,11 +82,7 @@
 // list.render();
 // list.doodssum();
 
-//! 1. Переделайте makeGETRequest() так, чтобы она использовала промисы.
-//! 2. Добавьте в соответствующие классы методы добавления товара в корзину, удаления товара из корзины и получения списка товаров корзины.
 
-// https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses – адрес API;
-// /catalogData.json – получить список товаров;
 
 const API_URL = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses'
 
@@ -120,7 +116,7 @@ class GoodsItem {
   }
 
   render() {
-    // создаем датасет
+
     let data = {
       "price": this.price,
       "product_name": this.product_name,
@@ -129,7 +125,7 @@ class GoodsItem {
 
     data = JSON.stringify(data);
 
-    // пишем его в код
+  
     return `<div class='goods-item'>
               <h3>${this.product_name}</h3>
               <p>${this.price}</p>
@@ -196,11 +192,10 @@ class Basket {
   }
 
   removeItem({ target }) {
-    // через датасет получаем id товара который хотим удалить
+    
     const { id } = target.dataset;
-    // через метод filter убираем этот товар из списка и перезаписваем его
     this.goods = this.goods.filter((item) => String(item.id_product) !== String(id));
-    // рендерим корзину с новым списком
+  
     this.render();
   }
 
